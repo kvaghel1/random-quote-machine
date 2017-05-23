@@ -67,7 +67,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Nosifer', cursive;
+	font-family: 'Helvetica', cursive;
 }
 
 a {
@@ -279,7 +279,7 @@ fieldset {
     margin: -26px 0 0 -26px;
     font-size: 40px;
     color: #ffffff;
-    font-family: 'Nosifer', cursive;
+    font-family: 'Helvetica', cursive;
 }
 
 
@@ -390,7 +390,7 @@ fieldset {
 
 .home-section-background {
 	padding: 95px 0px;
-    background-color: #72e5ff;
+    background-color: #071114;
 }
 
 .home-section-background h2 {

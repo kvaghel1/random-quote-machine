@@ -55,14 +55,18 @@ def get_page(web_url):
 		print (quote_json)
 		a = input("stop")
 
-	
+def create_url(topic_name):
+	pagination_number = 1
+	topic_name = topic_name.replace(" ","")
+	url = "https://www.brainyquote.com/quotes/topics/topic_"+str(topic_name)+str(pagination_number)+".html?vm=l"
+	return url
 
 if __name__ == "__main__":
 
-	pagination_number = 1
+	
 	while(True):
 		#https://www.brainyquote.com/quotes/topics/topic_motivational.html?vm=l
-		url = "https://www.brainyquote.com/quotes/topics/topic_motivational"+str(pagination_number)+".html?vm=l"
+		url = create_url("motivational")
 		print (url)
 		get_page(url)
 		pagination_number += 1
