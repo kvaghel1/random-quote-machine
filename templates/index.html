@@ -19,14 +19,14 @@
     <title>Random Quote Generator</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='styles/images/favicon/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="{{ url_for('static',filename='styles/images/favicon/apple-touch-icon.png') }}">
     
     <!-- All CSS Plugins -->
-    <link rel="stylesheet" type="text/css" href="css/plugin.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/plugin.css') }}">
     
     <!-- Main CSS Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
     
     <!-- Google Web Fonts  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700|Nosifer">
@@ -91,11 +91,11 @@
     
     
     <!-- All Javascript Plugins  -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/plugin.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='styles/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='styles/js/plugin.js') }}"></script>
     
     <!-- Main Javascript File  -->
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='styles/js/scripts.js') }}"></script>
   
   
   </body>
