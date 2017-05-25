@@ -43,9 +43,9 @@
 
   <body>
     <!-- Preloader Start -->
-      <div class="preloader">
+<!--       <div class="preloader">
        <p>Loading...</p>
-      </div>
+      </div> -->
       <!-- Preloader End -->
 	  
 	     <!-- Home Section Start -->
@@ -64,15 +64,16 @@
                             
                              
 							 <div class="col-md-6 col-md-offset-3 margin-top-50">
-                              <form id="mc-form" method="post" action="http://uipasta.us15.list-manage.com/subscribe/post?u=35ae345d2cc8ceed7b9542abb&amp;id=24cbd58a39">
-								
-						        <div class="subscribe-form">
-							     <input id="mc-email" placeholder="Enter Text" class="text-input">
+                
+                <form id="mc-form" method="post" action="{{ url_for('main') }}">
+								  <div class="subscribe-form">
+							     <input id="mc-email" placeholder="Enter Text" class="text-input" name="quote_text">
 							     <button class="submit-btn" type="submit">Submit</button>
-								 </div>
+								  </div>
 								<label for="mc-email" class="mc-label"></label>
 							  </form>
-							</div>
+							
+              </div>
 							
                         </div>
                         <!-- Home Section Heading End -->
