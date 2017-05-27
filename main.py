@@ -1,3 +1,6 @@
+'''
+This is the main module for flask application.
+'''
 import os
 from flask import Flask,render_template,send_from_directory,request
 
