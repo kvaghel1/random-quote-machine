@@ -58,14 +58,14 @@
                  <div class="col-md-12">
                      
                       
-                      <!-- Home Section Heading Start -->
+                      <!-- Home Section Heading Start  action="{{ url_for('main') }} -->
                       <div class="header-section">
                           <h2>Enter Text and click submit</h2>
                             
                              
 							 <div class="col-md-6 col-md-offset-3 margin-top-50">
                 
-                <form id="mc-form" method="post" action="{{ url_for('main') }}">
+                <form id="mc-form" method="post" ">
 								  <div class="subscribe-form">
 							     <input id="mc-email" placeholder="Enter Text" class="text-input" name="quote_text">
 							     <button class="submit-btn" type="submit">Submit</button>
