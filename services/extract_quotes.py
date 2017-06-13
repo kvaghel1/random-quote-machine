@@ -65,18 +65,47 @@ def create_url(topic_name):
 	url = "https://www.brainyquote.com/quotes/topics/topic_"+str(topic_name)+str(pagination_number)+".html?vm=l"
 	return url
 
+def search_sraping(topic_name):
+	web_url = "https://www.brainyquote.com/search_results.html?q=" + search_text
+	print (web_url)
+
+	hdr = {'User-agent':'Mozilla/5.0'}
+	req = Request(web_url,headers = hdr) 
+
+	page = urlopen(req)
+	soup = BeautifulSoup(page,"html.parser")
+
+	soup_all_div = soup.findAll('div', {'class':'m-brick grid-item boxy bqQt'})
+
+	for i in soup_all_div:
+		quote_text = i.findAll('a',{'title':'view quote'})
+		quote_author = i.findAll('a',{'title':'view author'})
+		quote_image = i.findAll('a',{'title':'view image'})
+
+		if(len(quote_text) > 0):
+			print (quote_text[0])
+		
+		if(len(quote_image) > 0):
+			print (quote_image[0])
+		
+		if(len(quote_author) > 0):
+			print (quote_author[0])
+		
+		a = input("stop..")
+
+
+
 if __name__ == "__main__":
 
+	# while(True):
+	# 	#https://www.brainyquote.com/quotes/topics/topic_motivational.html?vm=l
+	# 	url = create_url("motivational")
+	# 	print (url)
+	# 	get_page(url)
+	# 	pagination_number += 1
+	# 	print (pagination_number)
+	# 	a = input("Continue?")
+	search_text = input("Enter the search text...")
+	search_text.replace(" ","+")
 	
-	while(True):
-		#https://www.brainyquote.com/quotes/topics/topic_motivational.html?vm=l
-		url = create_url("motivational")
-		print (url)
-		get_page(url)
-		pagination_number += 1
-		print (pagination_number)
-		a = input("Continue?")
-
-
-
-
+	search_sraping(topic_name = search_text)
